@@ -1,0 +1,37 @@
+<form [formGroup]="formTask">
+
+  <mat-label><h1>Task Form</h1></mat-label>
+
+  <mat-grid-list cols="2" rowHeight="100px">
+    <mat-grid-tile>
+      <mat-form-field>
+      <mat-label>Task Name</mat-label>
+      <input matInput formControlName="task" placeholder="Task Name">
+    </mat-form-field>
+  </mat-grid-tile>
+    <mat-grid-tile>
+     <mat-form-field>
+      <mat-label>Description</mat-label>
+      <input matInput formControlName="description" placeholder="Description">
+    </mat-form-field></mat-grid-tile>
+    <mat-grid-tile>
+      <mat-form-field>
+        <mat-label>Date</mat-label>
+        <input matInput formControlName="date" placeholder="Date">
+      </mat-form-field>
+    </mat-grid-tile>
+    <mat-grid-tile>
+      <button mat-button [disabled]="!formTask.valid"
+      (click)="onClick()">Send Data</button>
+    </mat-grid-tile>
+  </mat-grid-list>
+
+
+  <!-- <mat-form-field> -->
+    <!-- <mat-label>Date</mat-label> -->
+    <!-- <input matInput formControlName="date" [matDatepicker]="picker"> -->
+    <!-- <mat-hint>MM/DD/YYYY</mat-hint> -->
+    <!-- <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle> -->
+    <!-- <mat-datepicker #picker></mat-datepicker> -->
+  <!-- </mat-form-field> -->
+</form>
